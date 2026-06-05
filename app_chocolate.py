@@ -115,11 +115,11 @@ def write_prediction(prediction: float):
     st.write("### Шкала рейтинга")
     col1, col2, col3, col4, col5 = st.columns(5)
     thresholds = [
-        (col1, 1.0, 2.0, "1–2", "Неудовл."),
-        (col2, 2.0, 2.75, "2–2.75", "Разочар."),
-        (col3, 2.75, 3.0, "2.75–3", "Рекомен."),
-        (col4, 3.0, 3.5, "3–3.5", "Высоко рек."),
-        (col5, 3.5, 5.0, "3.5–5", "Выдающ."),
+        (col1, 1.0, 1.9, "1–1.9",   "Неудовл."),
+        (col2, 2.0, 2.9, "2–2.9",   "Разочар."),
+        (col3, 3.0, 3.4, "3–3.4",   "Рекомен."),
+        (col4, 3.5, 3.9, "3.5–3.9", "Высоко рек."),
+        (col5, 4.0, 5.0, "4–5",     "Выдающ."),
     ]
     for col, low, high, label_range, label_name in thresholds:
         active = low <= prediction <= high
